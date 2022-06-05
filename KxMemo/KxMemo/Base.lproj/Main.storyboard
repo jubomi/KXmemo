@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -48,13 +49,33 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="KxMemo" id="uSC-LX-4bm">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="psf-8h-4cm"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="psf-8h-4cm">
+                            <connections>
+                                <segue destination="pvq-4A-YhL" kind="show" id="ooS-9F-jnd"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dLb-0q-pXB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="578" y="5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nYJ-aH-rHI">
+            <objects>
+                <viewController id="saK-I5-csI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gCd-2p-lGr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3PW-X8-zwO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="at9-MF-r30"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pk4-IW-Hob" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2187" y="5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GDt-5V-To5">
@@ -71,6 +92,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfC-cD-JOs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-312" y="5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZwI-qG-H0h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pvq-4A-YhL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="rzY-wp-AB4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dQE-7v-44t">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="saK-I5-csI" kind="relationship" relationship="rootViewController" id="r51-Rp-uZS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d3k-eB-Pax" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1304" y="-281"/>
         </scene>
     </scenes>
     <resources>
